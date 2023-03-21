@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+	  <groups>
+		  <define name="green">
+			  <include name="kandan"></include>
+			  <include name="mani"></include>
+		  </define>
+		  <run>
+			  <exclude name="kandan"></exclude>
+		  </run>
+	  </groups>
+    <classes>
+      <class name="com.Mani_Maven_Project.Amazon.Testng">
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,28 @@
+Feature: E_com App
+@smoke
+Scenario: Homepage
+Given user Launch The Application Url
+When user Select The "Music" From DropDown
+And user Search "cd" SearchBox
+Then user Clicks The Searched Product
+@smoke
+Scenario: ResultPage
+When user Fetch the FirstProductTitle
+And clicks The Product
+@smoke
+Scenario: ProductPage
+When switch The Browser
+And fetch The Selected Product Title
+@smoke
+Scenario: AddToCart Page
+Then click AddToCart Btn
+
+@alpha
+Scenario: Buy Page
+When click ProceedToBuy Btn
+
+@smoke
+Scenario: purchase Page
+When click GoToCart Btn
+And compare The Title
+ 
